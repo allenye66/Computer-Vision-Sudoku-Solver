@@ -1,5 +1,9 @@
 from flask import Flask, render_template, request
 import solve
+from solve import oogs
+import subprocess
+
+
 
 app = Flask(__name__)
 
@@ -8,10 +12,16 @@ def index():
 	print("received the values")
 	return render_template('index.html')
 
-@app.route('/obtainInput', methods = ['GET' ,'POST'])
+@app.route('/send', methods = ['GET' ,'POST'])
 def obtainInput():
+	if request.method == 'POST':
+		n = int(request.form['numbers'])
+		print("testing---------------------------------------------")
+		n = n * oogs()
 
+	return render_template('pass.html', num = n)
 
+'''
 	w, h = 9, 9;
 	grid = [[0 for x in range(w)] for y in range(h)] 
 
@@ -20,8 +30,7 @@ def obtainInput():
 
 	answers = solve(grid)
 
-	
-	return render_template('pass.html', grid)
+	'''
 
 if __name__ == '__main__':
 	app.run(debug=True)
