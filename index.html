@@ -1,60 +1,161 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>File Upload</title>
-		  <link rel="stylesheet" href="index.css">
-
-	</head>
-	<body>
-		<div class="TextField">
-			<form name = "search" action = "/send" method = "POST">
-				<label> Text: </label> 
-  				<input type="text" id="pin" name="numbers"  size=70>
-				<input type = "submit" value = "submit">
-			</form>
-		<div>
-		<form id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
-   			<input id="fileupload" name="myfile" type="file" />
-   			<input type="submit" value="submit" id="submit" />
-		</form>
-		<div contenteditable=true>
-  <table>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>5</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>8</td>
-      <td>9</td>
-    </tr>
-  </table>
-</div>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <td colspan="2"><input type="text" ></td>
-            <td colspan="2"><input type="text" ></td>
-            <td colspan="2"><input type="text" ></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="text" ></td>
-            <td colspan="2"><input type="text" ></td>
-            <td colspan="2"><input type="text" ></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="text" ></td>
-            <td colspan="2"><input type="text" ></td>
-            <td colspan="2"><input type="text" ></td>
-        </tr>
-    </thead>
-    
-</table>
-	</body>
+   <head>
+      <title>File Upload</title>
+      <link rel="stylesheet" href="index.css">
+   </head>
+   <body>
+      <div class="TextField">
+      <form name = "search" action = "/send" method = "POST">
+         <table>
+            <tr class = "box1">
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+            <tr>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+            <tr>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+         </table>
+         <br>
+         <table>
+            <tr class = "box2">
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+            <tr>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+            <tr>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+         </table>
+         <br>
+         <table>
+            <tr class = "box3">
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+            <tr>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+            <tr>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+               <td><input type="text" id="pin" name="numbers"  size=3></td>
+            </tr>
+         </table>
+         <input type = "submit" value = "submit">
+      </form>
+      <div>
+      <!--
+         <div class="TextField">
+            <form name = "search" action = "/send" method = "POST">
+                <label> Text: </label> 
+                        <input type="text" id="pin" name="numbers"  size=70>
+                <input type = "submit" value = "submit">
+            </form>
+         <div>
+               
+         
+         <form id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
+                    <input id="fileupload" name="myfile" type="file" />
+                    <input type="submit" value="submit" id="submit" />
+         </form>
+         
+         <div contenteditable=true>
+         <table>
+           <tr>
+             <td>1</td>
+             <td>2</td>
+             <td>3</td>
+           </tr>
+           <tr>
+             <td>4</td>
+             <td>5</td>
+             <td>6</td>
+           </tr>
+           <tr>
+             <td>7</td>
+             <td>8</td>
+             <td>9</td>
+           </tr>
+         </table>
+         </div>
+         <table class="table">
+           <thead>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+           </thead>
+         </table>
+         <br>
+         <table class="table">
+           <thead>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+           </thead>
+         </table>
+         <br>
+         <table class="table">
+           <thead>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input type="text" ></td>
+               </tr>
+           </thead>
+         </table>
+         -->
+   </body>
 </html>
