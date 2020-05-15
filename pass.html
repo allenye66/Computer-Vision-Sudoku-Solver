@@ -2,10 +2,59 @@
 <html lang = "en">
 <head>
 	<meta charset = "UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/pass.css">
 	<title> Result </title>
 </head>
 <body>
 	<h1> SOLUTION: </h1>
-	<h1>{{num}}</h1>
+    <div class="table">
+	<table>
+        <tr>
+            {% for num in nums[0] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[1] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[2] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[3] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[4] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[5] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[6] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[7] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            {% for num in nums[8] %}
+            <td>{{num}}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    </div>
 </body>
 </html>
