@@ -126,8 +126,10 @@ def obtainInput():
 		print(grid)
 
 		#sn = n * oogs(grid)
+	list = grid
+	iterate = {0, 1, 2, 3, 4, 5, 6, 7, 8}
 
-	return render_template('pass.html') #, num = n)
+	return render_template('pass.html', nums=list, iter=iterate) #, num = n)
 
 	'''
 	w, h = 9, 9;
