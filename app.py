@@ -21,7 +21,7 @@ def obtainInput():
 				s = ""+str(i) + ","+str(j)
 				temp = str(request.form[s])
 				if len(temp) == 0:
-					temp = str(10);
+					temp = str(0);
 				grid[j][i] = int(temp)
 
 		'''
@@ -123,13 +123,13 @@ def obtainInput():
 
 		#print(grid)
 		print("testing---------------------------------------------")
+		grid = oogs(grid)
 		print(grid)
 
 		#sn = n * oogs(grid)
-	list = grid
 	iterate = {0, 1, 2, 3, 4, 5, 6, 7, 8}
 
-	return render_template('pass.html', nums=list, iter=iterate) #, num = n)
+	return render_template('pass.html', nums=grid, iter=iterate) #, num = n)
 
 	'''
 	w, h = 9, 9;
