@@ -1,3 +1,4 @@
 print("this second class is working")
-def oogs():
+def oogs(grid):
+	
 	return 10
