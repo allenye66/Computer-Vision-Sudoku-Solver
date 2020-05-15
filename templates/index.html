@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <title>File Upload</title>
-      <link rel="stylesheet" type="text/css" href="/static/index.css">
+      <title>Sudoku Solver</title>
+      <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+      <script src="/static/script.js"></script>
+      <link rel="stylesheet" maxlength = "1" type="text/css" href="/static/index.css">
    </head>
    <body>
       <div class="TextField">
@@ -10,55 +12,55 @@
          <div class = "column1">
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="0,0"></td>
-                  <td><input type="text" class = "pin" name="1,0"></td>
-                  <td><input type="text" class = "pin" name="2,0"></td>
+                  <td><input maxlength = "1" type = "text" class = "pin" name="0,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,0"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="0,1"></td>
-                  <td><input type="text" class = "pin" name="1,1"></td>
-                  <td><input type="text" class = "pin" name="2,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,1"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="0,2"></td>
-                  <td><input type="text" class = "pin" name="1,2"></td>
-                  <td><input type="text" class = "pin" name="2,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,2"></td>
                </tr>
             </table>
             <br>
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="0,3"></td>
-                  <td><input type="text" class = "pin" name="1,3"></td>
-                  <td><input type="text" class = "pin" name="2,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,3"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="0,4"></td>
-                  <td><input type="text" class = "pin" name="1,4"></td>
-                  <td><input type="text" class = "pin" name="2,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,4"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="0,5"></td>
-                  <td><input type="text" class = "pin" name="1,5"></td>
-                  <td><input type="text" class = "pin" name="2,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,5"></td>
                </tr>
             </table>
             <br>
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="0,6"></td>
-                  <td><input type="text" class = "pin" name="1,6"></td>
-                  <td><input type="text" class = "pin" name="2,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,6"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="0,7"></td>
-                  <td><input type="text" class = "pin" name="1,7"></td>
-                  <td><input type="text" class = "pin" name="2,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,7"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="0,8"></td>
-                  <td><input type="text" class = "pin" name="1,8"></td>
-                  <td><input type="text" class = "pin" name="2,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="0,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="1,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="2,8"></td>
                </tr>
             </table>
          </div>
@@ -66,55 +68,55 @@
          <div class = "column2">
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="3,0"></td>
-                  <td><input type="text" class = "pin" name="4,0"></td>
-                  <td><input type="text" class = "pin" name="5,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,0"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="3,1"></td>
-                  <td><input type="text" class = "pin" name="4,1"></td>
-                  <td><input type="text" class = "pin" name="5,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,1"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="3,2"></td>
-                  <td><input type="text" class = "pin" name="4,2"></td>
-                  <td><input type="text" class = "pin" name="5,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,2"></td>
                </tr>
             </table>
             <br>
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="3,3"></td>
-                  <td><input type="text" class = "pin" name="4,3"></td>
-                  <td><input type="text" class = "pin" name="5,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,3"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="3,4"></td>
-                  <td><input type="text" class = "pin" name="4,4"></td>
-                  <td><input type="text" class = "pin" name="5,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,4"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="3,5"></td>
-                  <td><input type="text" class = "pin" name="4,5"></td>
-                  <td><input type="text" class = "pin" name="5,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,5"></td>
                </tr>
             </table>
             <br>
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="3,6"></td>
-                  <td><input type="text" class = "pin" name="4,6"></td>
-                  <td><input type="text" class = "pin" name="5,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,6"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="3,7"></td>
-                  <td><input type="text" class = "pin" name="4,7"></td>
-                  <td><input type="text" class = "pin" name="5,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,7"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="3,8"></td>
-                  <td><input type="text" class = "pin" name="4,8"></td>
-                  <td><input type="text" class = "pin" name="5,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="3,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="4,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="5,8"></td>
                </tr>
             </table>
          </div>
@@ -122,55 +124,55 @@
          <div class = "column3">
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="6,0"></td>
-                  <td><input type="text" class = "pin" name="7,0"></td>
-                  <td><input type="text" class = "pin" name="8,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,0"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,0"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="6,1"></td>
-                  <td><input type="text" class = "pin" name="7,1"></td>
-                  <td><input type="text" class = "pin" name="8,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,1"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,1"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="6,2"></td>
-                  <td><input type="text" class = "pin" name="7,2"></td>
-                  <td><input type="text" class = "pin" name="8,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,2"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,2"></td>
                </tr>
             </table>
             <br>
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="6,3"></td>
-                  <td><input type="text" class = "pin" name="7,3"></td>
-                  <td><input type="text" class = "pin" name="8,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,3"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,3"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="6,4"></td>
-                  <td><input type="text" class = "pin" name="7,4"></td>
-                  <td><input type="text" class = "pin" name="8,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,4"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,4"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="6,5"></td>
-                  <td><input type="text" class = "pin" name="7,5"></td>
-                  <td><input type="text" class = "pin" name="8,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,5"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,5"></td>
                </tr>
             </table>
             <br>
             <table>
                <tr class = "box">
-                  <td><input type="text" class = "pin" name="6,6"></td>
-                  <td><input type="text" class = "pin" name="7,6"></td>
-                  <td><input type="text" class = "pin" name="8,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,6"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,6"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="6,7"></td>
-                  <td><input type="text" class = "pin" name="7,7"></td>
-                  <td><input type="text" class = "pin" name="8,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,7"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,7"></td>
                </tr>
                <tr>
-                  <td><input type="text" class = "pin" name="6,8"></td>
-                  <td><input type="text" class = "pin" name="7,8"></td>
-                  <td><input type="text" class = "pin" name="8,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="6,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="7,8"></td>
+                  <td><input maxlength = "1" type="text" class = "pin" name="8,8"></td>
                </tr>
             </table>
          </div>
@@ -187,7 +189,7 @@
          <div class="TextField">
             <form name = "search" action = "/send" method = "POST">
                 <label> Text: </label> 
-                        <input type="text" class = "pin" name="numbers"  =70>
+                        <input maxlength = "1" type="text" class = "pin" name="numbers"  =70>
                 <input type = "submit" value = "submit">
             </form>
          <div>
@@ -220,39 +222,19 @@
          <table class="table">
            <thead>
                <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
                </tr>
                <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
                </tr>
                <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-               </tr>
-           </thead>
-         </table>
-         <br>
-         <table class="table">
-           <thead>
-               <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-               </tr>
-               <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-               </tr>
-               <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
                </tr>
            </thead>
          </table>
@@ -260,19 +242,39 @@
          <table class="table">
            <thead>
                <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
                </tr>
                <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
                </tr>
                <tr>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
-                   <td colspan="2"><input type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+               </tr>
+           </thead>
+         </table>
+         <br>
+         <table class="table">
+           <thead>
+               <tr>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+               </tr>
+               <tr>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
+                   <td colspan="2"><input maxlength = "1" type="text" ></td>
                </tr>
            </thead>
          </table>
