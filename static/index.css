@@ -4,10 +4,46 @@ html{
 /*shift + ctrl + r*/
 *{
 /*	border: 1px solid red;*/
+    box-sizing: border-box;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+/*    background-color: antiquewhite;*/
+    height: 550px;
+}
+
+.features{
+/*    background-color: aqua;*/
+    width: 600px;
+}
+
+.imageupload{
+    padding-top: 40px;
+/*    background-color: aliceblue;*/
+}
+
+#image{
+    
 }
 
 table{
     border-collapse: collapse;
+    margin-left: auto;
+/*    display: inline;*/
+/*    background-color: aliceblue;*/
+/*
+    width: 700px;
+    height: 550px;
+*/
+}
+
+.tablewrapper{
+/*    background-color: aliceblue;*/
+    width: 800px;
 }
 
 table th{
@@ -51,8 +87,31 @@ input:focus{
 }
 
 #button{
-	margin-top: 20px;
+	background-color: #249369;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    width: 200px;
+    height: 50px;
+    border: transparent;
+    border-radius: 5px;
+/*    margin-left: 50px;*/
+    margin-top: 22px;
 }
+
+#button:hover{
+    background-color: #2EBC86;
+}
+
+.form-group{
+/*    background-color: aliceblue;*/
+    margin-top: 20px;
+}
+
+.formwrap{
+    margin-left: 50px;
+}
+
 .letter{
     padding-right: 10px;
 }
