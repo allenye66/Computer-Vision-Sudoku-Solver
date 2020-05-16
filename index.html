@@ -3,8 +3,6 @@
    <head>
 
       <title>Sudoku Solver</title>
-      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
       <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
       <script src="/static/script.js"></script>
       <link rel="stylesheet" maxlength = "1" type="text/css" href="/static/index.css">
@@ -13,23 +11,15 @@
       <div class="container">
          <div class="row">
             <div class="col">
-               <h1>Sudoku Solver</h1>
+               <h1 style="text-align: center;">Sudoku Solver</h1>
                <hr>
-               <form action="/upload-image" method="POST" enctype="multipart/form-data">
-                  <div class="form-group">
-                     <label>Select image</label>
-                     <div class="custom-file">
-                        <input autocomplete="off"autocomplete="off" type="file" class="custom-file-input" name="image" id="image">
-                        <label class="custom-file-label" for="image">Select image...</label>
-                     </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Upload</button>
-               </form>
             </div>
          </div>
       </div>
       <div class="grid">
       <form name = "search" action = "/send" method = "POST">
+            <div class="wrapper">
+                <div class="tablewrapper">
             <table cellspacing="0">
                 <tr>
                     <th></th>
@@ -152,8 +142,22 @@
                   <td class="row9col9"><input autocomplete="off"onCLick="this.select();" maxlength = "1" type="text" class = "pin" name="8,8"></td>
                </tr>
             </table>
-         <input autocomplete="off"type = "submit" value = "submit" id = "button">
+                    </div>
+            <div class="features">
+         <input autocomplete="off" type = "submit" value = "SOLVE PUZZLE" id = "button">
+                <br>
+            <div class="imageupload">
+            <form action="/upload-image" method="POST" enctype="multipart/form-data">
+                     <label>Select image</label>
+                        <input autocomplete="off"autocomplete="off" type="file" class="custom-file-input" name="image" id="image">
+                <br>
+                        <label class="custom-file-label" for="image">Select image...</label>
+                  <button type="submit" class="btn btn-primary">Upload</button>
+               </form>
+                </div>
+                </div>
+          </div>
       </form>
-      <div>
+       </div>
    </body>
 </html>
