@@ -21,6 +21,14 @@ table td{
     width: 50px;
 }
 
+::selection{
+    background-color: transparent;
+}
+
+::-moz-selection {
+    background-color: transparent;
+}
+
 .pin{
 	font-size: 30px;
 	width: 50px;
@@ -41,6 +49,7 @@ input:focus{
 .pin:clicked{
     background-color: black;
 }
+
 #button{
 	margin-top: 20px;
 }
