@@ -88,13 +88,12 @@ def obtainInput():
 					temp = str(0);
 				grid[j][i] = int(temp)
 				grid2[i][j] = int(temp)
+		print(valid(grid))
 
-		#print(valid(grid))
 		#print("testing---------------------------------------------")
 		grid = return_grid(grid)
-		print(grid)
-		print(grid2)
-
+		#print(grid)
+		#print(grid2)
 		#print("***********")
 		hint = []
 		for i in range(9):
