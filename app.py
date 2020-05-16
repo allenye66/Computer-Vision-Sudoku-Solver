@@ -77,6 +77,7 @@ def upload_image():
 @app.route('/send', methods = ['GET' ,'POST'])
 def obtainInput():
 	grid = [[0 for i in range(9)] for j in range(9)]
+    grid2 = [[0 for i in range(9)] for j in range(9)]
 	if request.method == 'POST':
 		for i in range(9):
 			for j in range(9):
@@ -87,13 +88,21 @@ def obtainInput():
 				grid[j][i] = int(temp)
 
 		print(valid(grid))
+        grid2 = grid
 		print("testing---------------------------------------------")
 		grid = return_grid(grid)
 		print(grid)
+        hint = []
+        for i in range(9):
+            for j in range(9):
+                if grid[i][j] != grid2[i][j]:
+                    hints.append(grid[i][j])
+
+
 
 	iterate = {0, 1, 2, 3, 4, 5, 6, 7, 8}
 
-	return render_template('pass.html', nums=grid, iter=iterate) #, num = n)
+	return render_template('pass.html', nums=grid, iter=iterate, hints = hint, hLen = len(hint)) #, num = n)
 
 
 if __name__ == '__main__':

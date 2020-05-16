@@ -19,4 +19,4 @@
 
 // Install input filters.
 $("#intTextBox").inputFilter(function(value) {
-  return /^-?\d*$/.test(value); });
+  return /^-?\d*$0/.test(value); });
