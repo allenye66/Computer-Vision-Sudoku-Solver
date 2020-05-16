@@ -1,39 +1,85 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
 /*shift + ctrl + r*/
 *{
 /*	border: 1px solid red;*/
 }
+
+table{
+    border-collapse: collapse;
+}
+
+table th{
+    font-size: 20px;
+}
+
 table td{
   border: 1px solid black;
-  padding: 4px 12px;
+    text-align: center;
+    height: 50px;
+    width: 50px;
 }
-.column1{
-	position: absolute;
-	background-color:#F0F8FF;
-	border: 1px solid red;
-	width: 250px;
 
-}
-.column2{
-	position: absolute;
-	width: 250px;
-	/*border: 1px solid red;*/
-	left: 300px;
-	bottom: 255px;
-}
-.column3{
-	position: absolute;
-	width: 250px;
-	left: 600px;
-	bottom: 255px;
-
-}
 .pin{
 	font-size: 30px;
 	width: 50px;
 	height: 50px;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 0 0 black;
+    border: transparent;
+}
+
+.pin:hover{
+    background-color: #ADD8E6;
+}
+input:focus{
+    outline:none;
+    background-color: #ADD8E6;
+}
+.pin:clicked{
+    background-color: black;
 }
 #button{
-	position: absolute;
-	
-	bottom: 200px;
+	margin-top: 20px;
+}
+.letter{
+    padding-right: 10px;
+}
+
+.row1{
+    border-top: 5px solid black;
+}
+
+.row9{
+    border-bottom: 5px solid black;
+}
+
+.col1{
+    border-left: 5px solid black;
+}
+
+.row1col1{
+    border-top: 5px solid black;
+    border-left: 5px solid black;
+}
+
+.row9col1{
+    border-bottom: 5px solid black;
+    border-left: 5px solid black;
+}
+
+.row1col9{
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+}
+
+.col9{
+    border-right: 5px solid black;
+}
+
+.row9col9{
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
 }
