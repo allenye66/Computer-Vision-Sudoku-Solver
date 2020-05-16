@@ -88,7 +88,10 @@ def obtainInput():
 					temp = str(0);
 				grid[j][i] = int(temp)
 				grid2[i][j] = int(temp)
+
 		print(valid(grid))
+		#if valid(grid) == False:
+		#	return render_template('fail.html')
 
 		#print("testing---------------------------------------------")
 		grid = return_grid(grid)
