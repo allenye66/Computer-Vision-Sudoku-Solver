@@ -6,6 +6,7 @@ from solvable import valid
 import subprocess
 import os
 from werkzeug.utils import secure_filename
+import numpy as np
 app = Flask(__name__)
 
 app.config["IMAGE_UPLOADS"] = "/Users/allen/Desktop/SudokuSolver/static/img"
@@ -86,16 +87,28 @@ def obtainInput():
 				if len(temp) == 0:
 					temp = str(0);
 				grid[j][i] = int(temp)
+				grid2[i][j] = int(temp)
+
 		print(valid(grid))
-		grid2 = grid
-		print("testing---------------------------------------------")
+		#if valid(grid) == False:
+		#	return render_template('fail.html')
+
+		#print("testing---------------------------------------------")
 		grid = return_grid(grid)
-		print(grid)
+		#print(grid)
+		#print(grid2)
+		#print("***********")
 		hint = []
 		for i in range(9):
 			for j in range(9):
-				if grid[i][j] != grid2[i][j]:
-					hints.append(grid[i][j])
+				if grid[i][j] != grid2[i][j] :
+					hint.append(grid[i][j])
+		
+		print(hint)
+		print(len(hint))
+
+		print("******************************************************")
+
 
 
 
