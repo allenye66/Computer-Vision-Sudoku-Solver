@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import solve
-from solve import oogs
+from solve import return_grid
+import solvable
+from solvable import valid
 import subprocess
 import os
 from werkzeug.utils import secure_filename
@@ -84,12 +86,11 @@ def obtainInput():
 					temp = str(0);
 				grid[j][i] = int(temp)
 
-		#print(grid)
+		print(valid(grid))
 		print("testing---------------------------------------------")
-		grid = oogs(grid)
+		grid = return_grid(grid)
 		print(grid)
 
-		#sn = n * oogs(grid)
 	iterate = {0, 1, 2, 3, 4, 5, 6, 7, 8}
 
 	return render_template('pass.html', nums=grid, iter=iterate) #, num = n)
