@@ -14,11 +14,12 @@ html{
     align-items: center;
 /*    background-color: antiquewhite;*/
     height: 550px;
+    min-width: 1000px;
 }
 
 .features{
 /*    background-color: aqua;*/
-    width: 600px;
+    width: 40%;
 }
 
 .imageupload{
@@ -33,6 +34,7 @@ html{
 table{
     border-collapse: collapse;
     margin-left: auto;
+    margin-right: 30px;
 /*    display: inline;*/
 /*    background-color: aliceblue;*/
 /*
@@ -43,7 +45,7 @@ table{
 
 .tablewrapper{
 /*    background-color: aliceblue;*/
-    width: 800px;
+    width: 60%;
 }
 
 table th{
@@ -97,6 +99,7 @@ input:focus{
     border-radius: 5px;
 /*    margin-left: 50px;*/
     margin-top: 22px;
+    margin-left: 30px;
 }
 
 #button:hover{
