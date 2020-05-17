@@ -93,8 +93,8 @@ def obtainInput():
 		print(grid2)
 
 		print(isValid(grid2))
-		#if valid(grid) == False:
-		#	return render_template('fail.html')
+		if isValid(grid2) == False:
+			return render_template('fail.html')
 
 		grid = return_grid(grid)
 		#print(grid)
@@ -115,6 +115,7 @@ def obtainInput():
 
 
 	iterate = {0, 1, 2, 3, 4, 5, 6, 7, 8}
+
 	return render_template('pass.html', nums=grid, iter=iterate, hints = hint, hLen = len(hint)) #, num = n)
 
 
