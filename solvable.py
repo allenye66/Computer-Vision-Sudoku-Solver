@@ -1,80 +1,64 @@
+def checkRow(grid, row):
+	#3, 0, 0, 0, 0, 0, 0, 5
+	#3, 3, 0, 0, 0, 0, 0, 0
 
-def notInRow(arr, row): 
-	st = set() 
-
-	for i in range(0, 9):
-		if arr[row][i] in st: 
-			return False
-
-		if arr[row][i] !='0': 
-			st.add(arr[row][i]) 
-	
-	return True
-
-def notInCol(arr, col): 
-
-	st = set() 
-
-	for i in range(0, 9): 
-
-
-		if arr[i][col] in st: 
-			return False
- 
-		if arr[i][col] !='0': 
-			st.add(arr[i][col]) 
-	
-	return True
-
-
-def notInBox(arr, startRow, startCol): 
-
-	st = set() 
-
-	for row in range(0, 3): 
-		for col in range(0, 3): 
-			curr = arr[row + startRow][col + startCol] 
-
-			if curr in st: 
+	s = set()
+	for i in range(9):
+		temp = int(grid[row][i])
+		if temp != 0:
+			if temp in s:
+				#print("THIS ROW DOES NOT WORK")
 				return False
-
-
-			if curr !='0': 
-				st.add(curr) 
-		
+			s.add(temp)
+	return True
+def checkRows(grid):
+	for i in range(9):
+		checkRow(grid, i)
+		if checkRow(grid, i) == False:
+			return False
 	return True
 
 
-def isValid(arr, row, col): 
+def checkColumn(grid, col):
 
-	return (notInRow(arr, row) and notInCol(arr, col) and
-			notInBox(arr, row - row % 3, col - col % 3)) 
-
-def isValidConfig(arr): 
-	for i in range(0, 9): 
-		for j in range(0, 9): 
-
-			if not isValid(arr, i, j): 
+	s = set()
+	for i in range(9):
+		temp = int(grid[i][col])
+		if temp != 0:
+			if temp in s:
 				return False
-		
+			s.add(temp)
 	return True
-def valid(board): 
-	'''	
-	board = [[ '5', '3', '0', '0', '7', '0', '0', '0', '0' ],  
-			 [ '6', '0', '0', '1', '9', '5', '0', '0', '0' ],  
-			 [ '0', '9', '8', '0', '0', '0', '0', '6', '0' ],  
-			 [ '8', '0', '0', '0', '6', '0', '0', '0', '3' ],  
-			 [ '4', '0', '0', '8', '0', '3', '0', '0', '1' ],  
-			 [ '7', '0', '0', '0', '2', '0', '0', '0', '6' ],  
-			 [ '0', '6', '0', '0', '0', '0', '2', '8', '0' ],  
-			 [ '0', '0', '0', '4', '1', '9', '0', '0', '5' ],  
-			 [ '0', '0', '0', '0', '8', '0', '0', '7', '9' ]] 
-	'''	
-	if isValidConfig(board):  
-		return True; 
-	else: 
-		return False;
-  
 
-  
+def checkColumns(grid):
+	for i in range(9):
+		if checkColumn(grid, i) == False:
+			return False
+	return True
+
+def three(grid, row, col):
+	s = set()
+	for i in range(3):
+		for j in range(3):
+			temp = int(grid[i + row][j + col])
+			if temp in s:
+				return False
+			if temp != 0:
+				s.add(temp)
+	return True
+
+
+def isValid(grid):
+	if checkRows(grid) == False or checkColumns(grid) == False:
+		return False
+	for i in range(9):
+		for j in range(9):
+			row = i - i % 3
+			col = j - j % 3
+			if three(grid, row, col) == False:
+
+				return False
+	return True
+
+# NOT WORKING BECAUSE OF GRIDS WITH ALL ZEROES
 

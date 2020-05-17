@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import solve
 from solve import return_grid
 import solvable
-from solvable import valid
+from solvable import isValid
 import subprocess
 import os
 from werkzeug.utils import secure_filename
@@ -88,12 +88,14 @@ def obtainInput():
 					temp = str(0);
 				grid[j][i] = int(temp)
 				grid2[i][j] = int(temp)
+		print("DEBUGGING---------------------------------------------")
 
-		print(valid(grid))
+		print(grid2)
+
+		print(isValid(grid2))
 		#if valid(grid) == False:
 		#	return render_template('fail.html')
 
-		#print("testing---------------------------------------------")
 		grid = return_grid(grid)
 		#print(grid)
 		#print(grid2)
@@ -104,8 +106,8 @@ def obtainInput():
 				if grid[i][j] != grid2[i][j] :
 					hint.append(grid[i][j])
 		
-		print(hint)
-		print(len(hint))
+		#print(hint)
+		#print(len(hint))
 
 		print("******************************************************")
 
