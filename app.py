@@ -6,7 +6,6 @@ from solvable import isValid
 import subprocess
 import os
 from werkzeug.utils import secure_filename
-import numpy as np
 app = Flask(__name__)
 
 app.config["IMAGE_UPLOADS"] = "/Users/allen/Desktop/SudokuSolver/static/img"
