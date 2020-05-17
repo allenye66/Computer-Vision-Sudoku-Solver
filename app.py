@@ -73,6 +73,10 @@ def upload_image():
 
 	return render_template("templates/pass.html")
 
+@app.route('/return', methods = ['GET', 'POST'])
+def returnToHome():
+	return render_template("index.html")
+
 
 @app.route('/send', methods = ['GET' ,'POST'])
 def obtainInput():
