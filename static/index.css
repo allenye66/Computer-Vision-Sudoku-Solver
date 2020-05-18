@@ -1,28 +1,40 @@
 html{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    background-color: aliceblue;
+
+}
+#title{
+    font-size: 400%;
 }
 /*shift + ctrl + r*/
 *{
-/*	border: 1px solid red;*/
+	/*border: 1px solid red;*/
+
     box-sizing: border-box;
 }
+.grid{
+    margin-left: -45%;
+}
+.features{
+    border: 1px solid red;
 
+    margin-left: 5%;
+    width: 20%;
+    height: 100%;
+}
 .wrapper{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-/*    background-color: antiquewhite;*/
     background-color: aliceblue;
+
+/*    background-color: antiquewhite;*/
     height: 650px;
     min-width: 1000px;
     padding-top: 50px;
 }
 
-.features{
-/*    background-color: aqua;*/
-    width: 40%;
-}
 
 .imageupload{
     padding-top: 10px;
