@@ -4,7 +4,9 @@
 
       <title>Sudoku Solver</title>
       <link rel="shortcut icon" href= "{{ url_for('static', filename = 'favicon.ico')}}"> 
-
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
       <script src="/static/script.js"></script>
       <link rel="stylesheet" maxlength = "1" type="text/css" href="/static/index.css">
@@ -146,16 +148,25 @@
             </table>
                     </div>
             <div class="features">
-         <input autocomplete="off" type = "submit" value = "SOLVE PUZZLE" id = "button">
                 <br>
+                <h2>Upload an Image</h3>
             <div class="imageupload">
             <form action="/upload-image" method="POST" enctype="multipart/form-data">
-                        <input autocomplete="off" type="file" name="image" class="custom-file-input" id="file" title=" ">
-                        <span class="file-custom"></span>
+<!--
+                        <input autocomplete="off" type="file" name="image" class="custom-file-input" id="file" accept="image/*">
+                        <label for="file">
+                            <span class="material-icons">add_photo_alternate</span> &nbsp;
+                            Choose an Image
+                        </label>
                 <br>
                   <button type="submit" class="btn btn-primary">Upload</button>
+-->
+                <input type="file" id="real-file">
+                <button type="button" id="custom-button">CHOOSE AN IMAGE</button>
+                <span id="custom-text">No file chosen</span>
                </form>
                 </div>
+                <input autocomplete="off" type = "submit" value = "SOLVE PUZZLE" id = "button">
                 </div>
           </div>
       </form>

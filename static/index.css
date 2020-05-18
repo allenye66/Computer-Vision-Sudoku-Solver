@@ -25,14 +25,17 @@ html{
 }
 
 .imageupload{
-    padding-top: 40px;
+    padding-top: 10px;
 /*    background-color: aliceblue;*/
 }
 
+/*
 .custom-file-input::-webkit-file-upload-button{
     visibility: hidden;
 }
+*/
 
+/*
 .custom-file-input::before{
     content: 'Choose file';
     display: inline-block;
@@ -44,23 +47,56 @@ html{
     white-space: nowrap;
     -webkit-user-select: none;
     cursor: pointer;
-    text-shadow: 1px 1px #fff;
+    text-shadow: 1px 1px black;
     font-weight: 700;
     font-size: 10pt;
 }
+*/
 
+/*
 .custom-file-input:hover::before{
     border-color: black;
 }
+*/
 
+/*
 .cutom-file-input:active::before{
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
+*/
+
+input[type='file']{
+    display: none;
+/*
+    width: 200px;
+    height: 50px;
+*/
+/*
+    color: transparent;
+    width: 90px;
+    height: 30px;
+*/
+}
+
+label{
+    color: white;
+    height: 40px;
+    width: 180px;
+    background-color: #f5af09;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 5px;
+}
+
+
 
 table{
     border-collapse: collapse;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 150px;
 /*    display: inline;*/
 /*    background-color: aliceblue;*/
 /*
@@ -104,7 +140,8 @@ table td{
 }
 
 .pin:hover{
-    background-color: #ADD8E6;
+    cursor: pointer;
+/*    background-color: #ADD8E6;*/
 }
 input:focus{
     outline:none;
@@ -118,13 +155,14 @@ input:focus{
 	background-color: #249369;
     color: white;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 20px;
     width: 200px;
     height: 50px;
     border: transparent;
     border-radius: 5px;
 /*    margin-left: 50px;*/
-    margin-top: 22px;
+    margin-top: 240px;
+    cursor: pointer;
 }
 
 .btn{
@@ -132,12 +170,17 @@ input:focus{
     color: white;
     font-weight: bold;
     font-size: 20px;
-    width: 200px;
-    height: 50px;
+    width: 180px;
+    height: 40px;
     border: transparent;
-    border-radius: 5px;
+    border-radius: 20px;
 /*    margin-left: 50px;*/
-    margin-top: 22px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #42a1ca;
 }
 
 #button:hover{
