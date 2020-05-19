@@ -29,7 +29,7 @@ html{
     background-color: aliceblue;
 
 /*    background-color: antiquewhite;*/
-    height: 650px;
+    height: 580px;
     min-width: 1000px;
     padding-top: 50px;
 }
@@ -38,6 +38,25 @@ html{
 .uploadButton{
     margin-right: 100px;
     margin-top: 100px;
+}
+
+#custom-button{
+    padding: 10px;
+    color: white;
+    background-color: #009578;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#custom-button:hover{
+    background-color: #00b28f;
+}
+
+#custom-text{
+    margin-left: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: #aaa;
 }
 
 /*
@@ -75,9 +94,11 @@ html{
     background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 */
+/*
 
 input[type='file']{
     display: none;
+*/
 /*
     width: 200px;
     height: 50px;

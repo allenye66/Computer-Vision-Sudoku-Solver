@@ -13,10 +13,10 @@ app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["JPEG", "JPG", "PNG", "GIF"]
 app.config["MAX_IMAGE_FILESIZE"] = 0.5 * 1024 * 1024
 
 
-@app.route('/')
-def index():
-	print("received the values")
-	return render_template('index.html')
+# @app.route('/')
+# def index():
+# 	print("received the values")
+# 	return render_template('index.html')
 
 def allowed_image(filename):
 
@@ -38,40 +38,64 @@ def allowed_image_filesize(filesize):
 	else:
 		return False
 
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
-@app.route("/upload-image", methods=["GET", "POST"])
-def upload_image():
+@app.route("/")
+def index():
+	return render_template("index.html")
 
-	if request.method == "POST":
+@app.route("/upload", methods=['POST'])
+def upload():
+	target = os.path.join(APP_ROOT, 'images/')
+	print(target)
 
-		if request.files:
+	if not os.path.isdir(target):
+		os.mkdir(target)
 
-			if "filesize" in request.cookies:
+	for file in request.files.getlist("file"):
+		print(file)
+		filename = file.filename
+		destination = "/".join([target, filename])
+		print(destination)
+		file.save(destination)
+	return render_template("success.html")
 
-				if not allowed_image_filesize(request.cookies["filesize"]):
-					print("Filesize exceeded maximum limit")
-					return redirect(request.url)
+if __name__ == "__main__":
+	app.run(port=4555, debug=True)
 
-				image = request.files["image"]
-
-				if image.filename == "":
-					print("No filename")
-					return redirect(request.url)
-
-				if allowed_image(image.filename):
-					filename = secure_filename(image.filename)
-
-					image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
-
-					print("Image saved")
-
-					return redirect(request.url)
-
-				else:
-					print("That file extension is not allowed")
-					return redirect(request.url)
-
-	return render_template("templates/pass.html")
+# @app.route("/upload-image", methods=["GET", "POST"])
+# def upload_image():
+#
+# 	if request.method == "POST":
+#
+# 		if request.files:
+#
+# 			if "filesize" in request.cookies:
+#
+# 				if not allowed_image_filesize(request.cookies["filesize"]):
+# 					print("Filesize exceeded maximum limit")
+# 					return redirect(request.url)
+#
+# 				image = request.files["image"]
+#
+# 				if image.filename == "":
+# 					print("No filename")
+# 					return redirect(request.url)
+#
+# 				if allowed_image(image.filename):
+# 					filename = secure_filename(image.filename)
+#
+# 					image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
+#
+# 					print("Image saved")
+#
+# 					return redirect(request.url)
+#
+# 				else:
+# 					print("That file extension is not allowed")
+# 					return redirect(request.url)
+#
+# 	return render_template("templates/pass.html")
 
 @app.route('/return', methods = ['GET', 'POST'])
 def returnToHome():
