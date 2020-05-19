@@ -6,7 +6,6 @@ html{
 #title{
     font-size: 400%;
 }
-/*shift + ctrl + r*/
 *{
 	/*border: 1px solid red;*/
 
@@ -36,9 +35,9 @@ html{
 }
 
 
-.imageupload{
-    padding-top: 10px;
-/*    background-color: aliceblue;*/
+.uploadButton{
+    margin-right: 100px;
+    margin-top: 100px;
 }
 
 /*
