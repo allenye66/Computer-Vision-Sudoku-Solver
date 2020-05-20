@@ -61,7 +61,7 @@ def upload():
 	return render_template("success.html")
 
 if __name__ == "__main__":
-	app.run(port=4555, debug=True)
+	app.run(debug=True)
 
 # @app.route("/upload-image", methods=["GET", "POST"])
 # def upload_image():
