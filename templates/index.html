@@ -152,35 +152,16 @@
              </div>
           </form>
        </div>
+
+       <div class = "uploadPic">
+         <div id = "para">
+         <p> You can also choose to submit a picture of your grid here: </p>
+      </div>
        <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-<!--  					 <label class = "uploadButton" for="img">Select image:</label>-->
                     <input type="file" name="file" accept="image/*" multiple>
                     <input type="submit" value="send">
-<!--
-  					<input type="file" id="real-file" class="custom-file-input" name="file" hidden="hidden" accept="image/*">
-                    <button type="button" id="custom-button">CHOOSE A FILE</button>
-                    <span id="custom-text">No file chosen.</span>
-                  
-                    <script type="text/javascript">
-                        const realFileBtn = document.getElementById("real-file");
-                        const customBtn = document.getElementById("custom-button");
-                        const customTxt = document.getElementById("custom-text");
-                        
-                        customBtn.addEventListener("click", function() {
-                            realFileBtn.click();
-                        });
-                        
-                        realFileBtn.addEventListener("change", function(){
-                            if(realFileBtn.value){
-                                customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-                            } else{
-                                customTxt.innerHTML = "No file chosen.";
-                            }
-                        });
-                    </script>
-                    <input type="submit" value="send" class="btn btn-primary">
--->
 			</form>
+      </div>
       
   
    </body>

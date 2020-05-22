@@ -11,6 +11,15 @@ html{
 
     box-sizing: border-box;
 }
+.uploadPic{
+    width: 18%;
+    margin-left:70%;
+    margin-top: -30%;
+}
+#para{
+    font-size: 30px;
+    width: 130%;
+}
 .grid{
     margin-left: -45%;
 }
