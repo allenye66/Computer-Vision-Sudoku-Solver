@@ -19,7 +19,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DigitRecognizer/DigitRecognition" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
@@ -75,10 +75,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="447" y="157" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1589856543057" />
-    <state x="772" y="257" key="FileChooserDialogImpl" timestamp="1589856530641">
+    <state x="772" y="257" key="FileChooserDialogImpl" timestamp="1590309682649">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="772" y="257" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1589856530641" />
+    <state x="772" y="257" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1590309682649" />
     <state width="860" height="129" key="GridCell.Tab.0.bottom" timestamp="1589857297891">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
