@@ -14,14 +14,15 @@
       <div class="container">
          <div class="row">
             <div class="col">
-               <h1 id = "title" style="text-align: center; min-width: 1000px;">Sudoku Solver</h1>
+               <h1 id = "title" style="text-align: center; min-width: 1000px; color: #000B4F">Sudoku Solver</h1>
                <hr>
             </div>
          </div>
       </div>
-      <div class="grid">
+          <div class="wrapper">
+              <div>
+            <p id="para" style="padding-left: 30px;">Input numbers into the grid below: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OR</p>
          <form name = "search" action = "/send" method = "POST">
-            <div class="wrapper">
                <div class="tablewrapper">
                   <table cellspacing="0">
                      <tr>
@@ -145,23 +146,25 @@
                         <td class="row9col9"><input autocomplete="off"onCLick="this.select();" maxlength = "1" type="text" class = "pin" name="8,8"></td>
                      </tr>
                   </table>
-               </div>
+               
               
               
              <button type="submit" class="btn btn-primary" id = "button">Solve Puzzle</button>
-             </div>
+            </div>
           </form>
-       </div>
+        </div>
 
        <div class = "uploadPic">
          <div id = "para">
-         <p> You can also choose to submit a picture of your grid here: </p>
+         <p>Upload a picture of your grid: </p>
       </div>
        <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-                    <input type="file" name="file" accept="image/*" multiple>
+<!--                    <label for="filebutton" class="filebuttontext">Choose File</label>-->
+                    <input id="filebutton" type="file" name="file" accept="image/*" multiple>
                     <input type="submit" value="send">
 			</form>
       </div>
+          </div>
       
   
    </body>
