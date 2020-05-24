@@ -6,8 +6,30 @@ import numpy
 import pygame
 clf = joblib.load("digits_cls.pkl")
 
+# initialize pygame
+pygame.init()
+# prompt window dimensions
+# create window with white canvas
+screen = pygame.display.set_mode((600, 400))
+screen.fill((255, 255, 255))
+pygame.display.set_caption("Write a digit")
 
-im = cv2.imread("/Users/allen/Desktop/five.jpg")
+loop = True
+while loop:
+    for event in pygame.event.get():
+        # save image when finished drawing
+        if event.type == pygame.QUIT:
+            pygame.image.save(screen, 'num.jpg')
+            loop = False
+    # draw circle on mouse position when left click is pressed
+    x, y = pygame.mouse.get_pos()
+    if pygame.mouse.get_pressed() == (1, 0, 0):
+        pygame.draw.circle(screen, (0, 0, 0), (x, y), 10)
+    pygame.display.update()
+pygame.quit()
+
+# read input image
+im = cv2.imread("num.jpg")
 
 # convert to grayscale and apply Gaussian filter to blur edges and reduce contrast
 im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
@@ -39,6 +61,5 @@ for rect in rects:
         roi_hog_fd = hog(roi, orientations=9, pixels_per_cell=(14, 14), cells_per_block=(1, 1), visualize=False)
         nbr = clf.predict(numpy.array([roi_hog_fd], 'float64'))
         cv2.putText(im, str(int(nbr[0])), (rect[0], rect[1]), cv2.FONT_HERSHEY_DUPLEX, 2, (0, 255, 255), 3)
-        print(str(int(nbr[0])))
 cv2.imshow("Predictions", im)
 cv2.waitKey()
