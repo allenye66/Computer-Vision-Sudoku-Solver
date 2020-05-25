@@ -1,5 +1,7 @@
 import numpy as np
 import cv2
+import matplotlib
+matplotlib.use('agg')
 from matplotlib import pyplot as plt
 # import image_slicer
 
