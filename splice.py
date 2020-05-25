@@ -1,10 +1,10 @@
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
-import image_slicer
+# import image_slicer
 
-def splice_image(img):  
-	img = cv2.imread('/Users/allen/Desktop/download.png')
+def splice_image(img):
+	img = cv2.imread(img)
 	img = cv2.resize(img, dsize=(252, 252), interpolation=cv2.INTER_CUBIC)
 
 	print(img.shape)
@@ -32,7 +32,7 @@ def splice_image(img):
 			axarr[i][j].imshow(imageArr[c])
 			c = c + 1
 
-	plt.show()
+	# plt.show()
 	return imageArr
 
 #if __name__ == '__main__':

@@ -5,8 +5,9 @@ import solvable
 from solvable import isValid
 import subprocess
 import os
+import cv2
 from werkzeug.utils import secure_filename
-import predict
+# import predict
 from predict import predict_grid
 app = Flask(__name__)
 
@@ -58,7 +59,7 @@ def upload():
 		print("**************************")
 		print(type(file))
 		print(file)
-		predict_grid(file)
+		predict_grid("images/" + file.filename)
 		filename = file.filename
 		destination = "/".join([target, filename])
 		print(destination)

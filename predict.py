@@ -2,20 +2,19 @@ import cv2
 import joblib
 from skimage.feature import hog
 import numpy
-import splice
+# import splice
 from splice import splice_image
 
 
 def predict_single(image):
     clf = joblib.load("digits_cls.pkl")
 
-    im = cv2.imread("/Users/allen/Desktop/five.jpg")
-
-    im_gray = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    im_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     im_gray = cv2.GaussianBlur(im_gray, (5, 5), 0)
     ret, im_th = cv2.threshold(im_gray, 90, 255, cv2.THRESH_BINARY_INV)
     ctrs, hier = cv2.findContours(im_th.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     rects = [cv2.boundingRect(ctr) for ctr in ctrs]
+    # nbr = 1
 
     for rect in rects:
         #cv2.rectangle(im, (rect[0], rect[1]), (rect[0] + rect[2], rect[1] + rect[3]), (0, 255, 0), 3)
@@ -29,9 +28,11 @@ def predict_single(image):
             roi = cv2.dilate(roi, (3, 3))
             roi_hog_fd = hog(roi, orientations=9, pixels_per_cell=(14, 14), cells_per_block=(1, 1), visualize=False)
             nbr = clf.predict(numpy.array([roi_hog_fd], 'float64'))
+            return (nbr[0])
             #cv2.putText(im, str(int(nbr[0])), (rect[0], rect[1]), cv2.FONT_HERSHEY_DUPLEX, 2, (0, 255, 255), 3)
             #print(str(int(nbr[0])))
-    return (int(nbr[0]))
+    # x = int(nbr[0])
+    # return (str(nbr[0]))
     #cv2.imshow("Predictions", im)
     #cv2.waitKey()
 def predict_grid(image):
@@ -39,4 +40,5 @@ def predict_grid(image):
     grid = []
     for i in range(81):
         grid.append(predict_single(imgArr[i]))
+    print(len(grid))
     print(grid)
