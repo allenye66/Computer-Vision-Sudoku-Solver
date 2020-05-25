@@ -2,35 +2,41 @@ import numpy as np
 import cv2
 from matplotlib import pyplot as plt
 import image_slicer
-   
-img = cv2.imread('/Users/allen/Desktop/download.png')
-img = cv2.resize(img, dsize=(252, 252), interpolation=cv2.INTER_CUBIC)
 
-print(img.shape)
+def splice_image(img):  
+	img = cv2.imread('/Users/allen/Desktop/download.png')
+	img = cv2.resize(img, dsize=(252, 252), interpolation=cv2.INTER_CUBIC)
 
-imageArr = []
-for i in range(9):
-	leftSide = i* 28
-	rightSide = i*28 + 28
-	for j in range(9):
-		topSide = j*28
-		bottomSide = j*28 + 28
-		#a = [leftSide,rightSide,topSide, bottomSide]
-		#print(a)
-		imageArr.append(img[leftSide:rightSide,topSide:bottomSide])
+	print(img.shape)
 
-		#imageArr.append(img[topSide:bottomSide, leftSide:rightSide])
+	imageArr = []
+	for i in range(9):
+		leftSide = i* 28
+		rightSide = i*28 + 28
+		for j in range(9):
+			topSide = j*28
+			bottomSide = j*28 + 28
+			#a = [leftSide,rightSide,topSide, bottomSide]
+			#print(a)
+			imageArr.append(img[leftSide:rightSide,topSide:bottomSide])
+
+			#imageArr.append(img[topSide:bottomSide, leftSide:rightSide])
 
 
-f, axarr = plt.subplots(9,9)
+	f, axarr = plt.subplots(9,9)
 
-c = 0
-for i in range(9):
-	for j in range(9):
-		index = i, j
-		axarr[i][j].imshow(imageArr[c])
-		c = c + 1
+	c = 0
+	for i in range(9):
+		for j in range(9):
+			index = i, j
+			axarr[i][j].imshow(imageArr[c])
+			c = c + 1
 
-plt.show()
+	plt.show()
+	return imageArr
+
+#if __name__ == '__main__':
+#	img = cv2.imread('/Users/allen/Desktop/download.png')
+#	splice_image(img)
 
 

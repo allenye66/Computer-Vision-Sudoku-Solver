@@ -6,6 +6,8 @@ from solvable import isValid
 import subprocess
 import os
 from werkzeug.utils import secure_filename
+import predict
+from predict import predict_grid
 app = Flask(__name__)
 
 app.config["IMAGE_UPLOADS"] = "/Users/allen/Desktop/SudokuSolver/static/img"
@@ -53,7 +55,10 @@ def upload():
 		os.mkdir(target)
 
 	for file in request.files.getlist("file"):
+		print("**************************")
+		print(type(file))
 		print(file)
+		predict_grid(file)
 		filename = file.filename
 		destination = "/".join([target, filename])
 		print(destination)
