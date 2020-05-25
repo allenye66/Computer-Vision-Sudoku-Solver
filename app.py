@@ -55,15 +55,16 @@ def upload():
 	if not os.path.isdir(target):
 		os.mkdir(target)
 
-	for file in request.files.getlist("file"):
-		print("**************************")
-		print(type(file))
-		print(file)
-		predict_grid("images/" + file.filename)
-		filename = file.filename
-		destination = "/".join([target, filename])
-		print(destination)
-		file.save(destination)
+	file = request.files.getlist("file")[0]
+	# for file in request.files.getlist("file"):
+	print("**************************")
+	print(type(file))
+	print(file)
+	predict_grid("images/" + file.filename)
+	filename = file.filename
+	destination = "/".join([target, filename])
+	print(destination)
+	file.save(destination)
 	return render_template("success.html")
 
 if __name__ == "__main__":
