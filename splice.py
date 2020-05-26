@@ -8,7 +8,6 @@ from matplotlib import pyplot as plt
 def splice_image(img):
 	img = cv2.imread(img)
 	img = cv2.resize(img, dsize=(252, 252), interpolation=cv2.INTER_CUBIC)
-
 	print(img.shape)
 
 	imageArr = []

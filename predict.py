@@ -6,9 +6,9 @@ import numpy
 from splice import splice_image
 
 
+
 def predict_single(image):
     clf = joblib.load("digits_cls.pkl")
-
     im_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     im_gray = cv2.GaussianBlur(im_gray, (5, 5), 0)
     ret, im_th = cv2.threshold(im_gray, 90, 255, cv2.THRESH_BINARY_INV)
@@ -42,3 +42,9 @@ def predict_grid(image):
         grid.append(predict_single(imgArr[i]))
     print(len(grid))
     print(grid)
+'''
+if __name__ == '__main__':
+    img = cv2.imread('/Users/allen/Desktop/seven.png')
+    img = cv2.resize(img, dsize=(40, 40), interpolation=cv2.INTER_CUBIC)
+    print(predict_single(img))
+'''
