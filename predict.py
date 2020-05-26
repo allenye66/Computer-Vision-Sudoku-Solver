@@ -46,5 +46,6 @@ def predict_grid(image):
 if __name__ == '__main__':
     img = cv2.imread('/Users/allen/Desktop/seven.png')
     img = cv2.resize(img, dsize=(40, 40), interpolation=cv2.INTER_CUBIC)
-    print(predict_single(img))
+    print(predict_grid(img))
+
 '''
