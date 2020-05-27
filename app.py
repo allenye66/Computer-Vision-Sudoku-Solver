@@ -72,8 +72,8 @@ def upload():
     # destination = "/".join([target, filename])
     # print(destination)
     # file.save(destination)
-	predict_grid(img)
-	return render_template("success.html")
+	completeArray = predict_grid(img)
+	return render_template("success.html", array = completeArray)
 
 if __name__ == "__main__":
 	app.run(debug=True)

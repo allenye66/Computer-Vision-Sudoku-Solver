@@ -42,6 +42,7 @@ def predict_grid(image):
         grid.append(predict_single(imgArr[i]))
     print(len(grid))
     print(grid)
+    return grid
 '''
 if __name__ == '__main__':
     img = cv2.imread('/Users/allen/Desktop/seven.png')
