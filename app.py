@@ -12,6 +12,8 @@ from werkzeug.utils import secure_filename
 # import predict
 from predict import predict_grid
 import numpy as np
+import deepPredict
+from deepPredict import CNN_predict_grid
 app = Flask(__name__)
 
 app.config["IMAGE_UPLOADS"] = "/Users/allen/Desktop/SudokuSolver/static/img"
@@ -72,7 +74,9 @@ def upload():
     # destination = "/".join([target, filename])
     # print(destination)
     # file.save(destination)
+	#img = cv2.imdecode(img, cv2.IMREAD_GRAYSCALE)
 	completeArray = predict_grid(img)
+	#completeArray =CNN_predict_grid(img)
 	return render_template("success.html", array = completeArray)
 
 if __name__ == "__main__":

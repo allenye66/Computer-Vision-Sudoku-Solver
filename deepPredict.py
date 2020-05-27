@@ -84,7 +84,7 @@ def CNN_predict_grid(image_grid):
 	#print(len(grid))
 	#print(grid)
 	return grid
-
+'''
 if __name__ == '__main__':
 	#img = cv2.imread('/Users/allen/Desktop/download.png')
 	img = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
@@ -94,5 +94,5 @@ if __name__ == '__main__':
 	#img = cv2.imread("/Users/allen/Desktop/three.png")
 	#img = cv2.resize(img, (28, 28))
 	#print(blankSpot(img))
-
+'''
 
