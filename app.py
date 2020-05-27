@@ -1,3 +1,5 @@
+import io
+
 from flask import Flask, render_template, request, redirect, url_for, flash
 import solve
 from solve import return_grid
@@ -9,6 +11,7 @@ import cv2
 from werkzeug.utils import secure_filename
 # import predict
 from predict import predict_grid
+import numpy as np
 app = Flask(__name__)
 
 app.config["IMAGE_UPLOADS"] = "/Users/allen/Desktop/SudokuSolver/static/img"
@@ -60,11 +63,16 @@ def upload():
 	print("**************************")
 	print(type(file))
 	print(file)
-	predict_grid("images/" + file.filename)
-	filename = file.filename
-	destination = "/".join([target, filename])
-	print(destination)
-	file.save(destination)
+	in_memory_file = io.BytesIO()
+	file.save(in_memory_file)
+	data = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
+	color_image_flag = 1
+	img = cv2.imdecode(data, color_image_flag);
+    # filename = file.filename
+    # destination = "/".join([target, filename])
+    # print(destination)
+    # file.save(destination)
+	predict_grid(img)
 	return render_template("success.html")
 
 if __name__ == "__main__":
