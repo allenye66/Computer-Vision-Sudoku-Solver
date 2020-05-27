@@ -55,8 +55,8 @@ def blankSpot(blank):
 	s = set()
 	for i in range(10):
 		for j in range(10):
-			for k in range(2):
-				s.add(blank[i + 10][j + 10][k])
+			#for k in range(2):
+			s.add(blank[i + 10][j + 10])
 			#print((i + 10), ",", (j+10), ": ", blank[i + 10][j+10])
 	print(s)
 	if len(s) == 1:
@@ -87,12 +87,12 @@ def CNN_predict_grid(image_grid):
 
 if __name__ == '__main__':
 	#img = cv2.imread('/Users/allen/Desktop/download.png')
-	#img = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
-	#print(CNN_predict_grid(img))
+	img = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
+	print(CNN_predict_grid(img))
 	#img = cv2.imread('/Users/allen/Desktop/five.png',cv2.IMREAD_GRAYSCALE)
 	#print(CNN_predict_single(img))
-	img = cv2.imread("/Users/allen/Desktop/five.png")
-	img = cv2.resize(img, (28, 28))
-	print(blankSpot(img))
+	#img = cv2.imread("/Users/allen/Desktop/three.png")
+	#img = cv2.resize(img, (28, 28))
+	#print(blankSpot(img))
 
 
