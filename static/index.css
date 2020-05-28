@@ -3,6 +3,12 @@ html{
     background-color: #EBEBEB;
 
 }
+#explanation{
+    font-size: 20px;
+    width:500px;
+    text-align: left;
+    word-wrap: break-word;
+}
 #title{
     font-size: 60px;
 }
@@ -22,7 +28,7 @@ html{
     right: 100px;
 }
 #para{
-    font-size: 30px;
+    font-size: 40px;
     color: #000B4F;
 }
 
