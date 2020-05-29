@@ -63,18 +63,18 @@ def upload():
 	print("**************************")
 	print(type(file))
 	print(file)
-	filename = file.filename
-	predict_grid("images/" + filename)  # change to img
-	# in_memory_file = io.BytesIO()
-	# file.save(in_memory_file)
-	# data = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
-	# color_image_flag = 1
-	# img = cv2.imdecode(data, color_image_flag)
-	# completeArray = predict_grid(img)
+	# filename = file.filename
+
+	in_memory_file = io.BytesIO()
+	file.save(in_memory_file)
+	data = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
+	color_image_flag = 1
+	img = cv2.imdecode(data, color_image_flag)
+	completeArray = predict_grid(img)
     # destination = "/".join([target, filename])
     # print(destination)
     # file.save(destination)
-	return render_template("success.html")
+	return render_template("success.html", array = completeArray)
 
 if __name__ == "__main__":
 	app.run(debug=True)
