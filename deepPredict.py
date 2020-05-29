@@ -76,7 +76,8 @@ def CNN_predict_single(image):
 	prediction = model.predict_classes(prepare(image))
 	return(prediction[0])
 '''
-def CNN_predict_grid(image_grid):
+def CNN_predict_grid(filepath):
+	image_grid = cv2.imread(filepath,cv2.IMREAD_GRAYSCALE)
 	imgArr = splice_image(image_grid)
 	grid = []
 	for i in range(81):
@@ -87,12 +88,11 @@ def CNN_predict_grid(image_grid):
 
 if __name__ == '__main__':
 	#img = cv2.imread('/Users/allen/Desktop/download.png')
-	img = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
-	print(CNN_predict_grid(img))
+#	img = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
+	print(CNN_predict_grid('/Users/allen/Desktop/download.png'))
 	#img = cv2.imread('/Users/allen/Desktop/five.png',cv2.IMREAD_GRAYSCALE)
 	#print(CNN_predict_single(img))
 	#img = cv2.imread("/Users/allen/Desktop/three.png")
 	#img = cv2.resize(img, (28, 28))
 	#print(blankSpot(img))
-
 
