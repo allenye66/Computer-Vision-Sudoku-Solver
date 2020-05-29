@@ -1,5 +1,6 @@
 import io
-
+import deepPredict
+from deepPredict import CNN_predict_grid
 from flask import Flask, render_template, request, redirect, url_for, flash
 import solve
 from solve import return_grid
@@ -63,13 +64,15 @@ def upload():
 	print("**************************")
 	print(type(file))
 	print(file)
-	# filename = file.filename
-
+	filename = file.filename
+	print(filename)
 	in_memory_file = io.BytesIO()
 	file.save(in_memory_file)
 	data = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
 	color_image_flag = 1
 	img = cv2.imdecode(data, color_image_flag)
+	print(CNN_predict_grid("/Users/allen/Desktop/download.png"))
+	#completeArray = CNN_predict_grid("/Users/allen/Desktop/download.png")
 	completeArray = predict_grid(img)
     # destination = "/".join([target, filename])
     # print(destination)

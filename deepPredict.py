@@ -77,6 +77,7 @@ def CNN_predict_single(image):
 	return(prediction[0])
 '''
 def CNN_predict_grid(filepath):
+	#image_grid = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
 	image_grid = cv2.imread(filepath,cv2.IMREAD_GRAYSCALE)
 	imgArr = splice_image(image_grid)
 	grid = []
@@ -85,11 +86,13 @@ def CNN_predict_grid(filepath):
 	#print(len(grid))
 	#print(grid)
 	return grid
+def hello():
+    return 'Hi'
 
-if __name__ == '__main__':
+#if __name__ == '__main__':
 	#img = cv2.imread('/Users/allen/Desktop/download.png')
-#	img = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
-	print(CNN_predict_grid('/Users/allen/Desktop/download.png'))
+	#img = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
+#	print(CNN_predict_grid('/Users/allen/Desktop/download.png'))
 	#img = cv2.imread('/Users/allen/Desktop/five.png',cv2.IMREAD_GRAYSCALE)
 	#print(CNN_predict_single(img))
 	#img = cv2.imread("/Users/allen/Desktop/three.png")
