@@ -8,7 +8,7 @@ import numpy
 
 model = load_model('digits.h5')
 import cv2
-#model.summary()
+model.summary()
 
 
 def prepare(img):
