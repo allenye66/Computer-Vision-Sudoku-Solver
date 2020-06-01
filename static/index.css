@@ -1,6 +1,8 @@
 html{
     font-family: 'Open Sans';
-    background-color: #EBEBEB;
+    /*background-color: #EBEBEB;*/
+    background: linear-gradient(to bottom, #00BFFF, #E0FFFF);
+
 
 }
 #explanation{
