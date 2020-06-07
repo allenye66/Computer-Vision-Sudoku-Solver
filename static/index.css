@@ -2,6 +2,8 @@ html{
     font-family: 'Open Sans';
     /*background-color: #EBEBEB;*/
     background: linear-gradient(to bottom, #00BFFF, #E0FFFF);
+    height: 120%;
+
 
 
 }
@@ -15,7 +17,7 @@ html{
     font-size: 60px;
 }
 *{
-	/*border: 1px solid red;*/
+	border: 1px solid red;
 
     box-sizing: border-box;
 }
