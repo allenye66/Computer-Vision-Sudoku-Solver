@@ -23,6 +23,8 @@ app = Flask(__name__)
 import tensorflow as tf
 import keras
 from keras.models import load_model
+tf.logging.set_verbosity(tf.logging.ERROR)
+
 
 model = load_model('digits.h5')
 
@@ -65,6 +67,7 @@ def CNN_predict_single(image):
 	else:
 		prediction = model.predict_classes(prepare(image))
 		return(prediction[0])
+
 def CNN_predict_grid(filepath):
 	#image_grid = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
 	image_grid = cv2.imread(filepath,cv2.IMREAD_GRAYSCALE)
@@ -121,16 +124,13 @@ def upload():
 	color_image_flag = 1
 	img = cv2.imdecode(data, color_image_flag)
 	#run()
-	print(CNN_predict_grid("/Users/allen/Desktop/download.png"))
+	#print(CNN_predict_grid("/Users/allen/Desktop/download.png"))
 	#completeArray = CNN_predict_grid("/Users/allen/Desktop/download.png")
 	completeArray = predict_grid(img)
     # destination = "/".join([target, filename])
     # print(destination)
     # file.save(destination)
 	return render_template("success.html", array = completeArray)
-
-if __name__ == "__main__":
-	app.run(debug=True)
 
 # @app.route("/upload-image", methods=["GET", "POST"])
 # def upload_image():

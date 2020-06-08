@@ -10,6 +10,8 @@ import keras
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
+tf.logging.set_verbosity(tf.logging.ERROR)
+
 batch_size = 128
 num_classes = 10
 epochs = 12

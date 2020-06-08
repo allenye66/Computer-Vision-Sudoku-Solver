@@ -40,13 +40,31 @@ def predict_grid(image):
     grid = []
     for i in range(81):
         grid.append(predict_single(imgArr[i]))
-    print(len(grid))
+    #print(len(grid))
+    #print(grid)
+
+    grid2 = [[0 for i in range(9)] for j in range(9)]
+    counter = 0
+    for i in range(81):
+        if grid[i] is None:
+            grid[i] = int(0)
+        else:
+            grid[i] = int(grid[i])
+    counter = 0
     print(grid)
-    return grid
-'''
+    for i in range(9):
+        for j in range(9):
+            grid2[i][j] = grid[counter]
+            counter = counter + 1
+            
+
+    
+
+
+    return grid2
+
 if __name__ == '__main__':
-    img = cv2.imread('/Users/allen/Desktop/seven.png')
+    img = cv2.imread('/Users/allen/Desktop/download.png')
     img = cv2.resize(img, dsize=(40, 40), interpolation=cv2.INTER_CUBIC)
     print(predict_grid(img))
 
-'''

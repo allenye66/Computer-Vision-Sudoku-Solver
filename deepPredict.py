@@ -5,6 +5,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 from splice import splice_image
 import numpy
+tf.logging.set_verbosity(tf.logging.ERROR)
 
 model = load_model('digits.h5')
 import cv2
