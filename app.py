@@ -1,6 +1,8 @@
 import io
-import deepPredict
-from deepPredict import CNN_predict_grid
+from splice import splice_image
+import numpy
+#mport deepPredict
+#from deepPredict import CNN_predict_grid
 from flask import Flask, render_template, request, redirect, url_for, flash
 import solve
 from solve import return_grid
@@ -13,7 +15,16 @@ from werkzeug.utils import secure_filename
 # import predict
 from predict import predict_grid
 import numpy as np
+
+#import runDeep
+#from runDeep import run
+
 app = Flask(__name__)
+import tensorflow as tf
+import keras
+from keras.models import load_model
+
+model = load_model('digits.h5')
 
 app.config["IMAGE_UPLOADS"] = "/Users/allen/Desktop/SudokuSolver/static/img"
 app.config["ALLOWED_IMAGE_EXTENSIONS"] = ["JPEG", "JPG", "PNG", "GIF"]
@@ -24,6 +35,44 @@ app.config["MAX_IMAGE_FILESIZE"] = 0.5 * 1024 * 1024
 # def index():
 # 	print("received the values")
 # 	return render_template('index.html')
+
+
+def prepare(img):
+	img_size = 28
+	#img_arr = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)
+	new_arr = cv2.resize(img, (img_size, img_size)) #resize for CNN
+	new_arr = numpy.invert(new_arr) #mnist dataset has data that is inverted so we must invert our input
+	#plt.imshow(new_arr)
+	#plt.show()
+	return new_arr.reshape(-1, img_size, img_size, 1)
+
+def blankSpot(blank):
+
+	s = set()
+	for i in range(10):
+		for j in range(10):
+			#for k in range(2):
+			s.add(blank[i + 10][j + 10])
+			#print((i + 10), ",", (j+10), ": ", blank[i + 10][j+10])
+	#print(s)
+	if len(s) == 1:
+		return True
+	else: 
+		return False
+def CNN_predict_single(image):
+	if blankSpot(image) == True:
+		return int(0)
+	else:
+		prediction = model.predict_classes(prepare(image))
+		return(prediction[0])
+def CNN_predict_grid(filepath):
+	#image_grid = cv2.imread('/Users/allen/Desktop/download.png',cv2.IMREAD_GRAYSCALE)
+	image_grid = cv2.imread(filepath,cv2.IMREAD_GRAYSCALE)
+	imgArr = splice_image(image_grid)
+	grid = []
+	for i in range(81):
+		grid.append(CNN_predict_single(imgArr[i]))
+	return grid
 
 def allowed_image(filename):
 
@@ -71,6 +120,7 @@ def upload():
 	data = np.fromstring(in_memory_file.getvalue(), dtype=np.uint8)
 	color_image_flag = 1
 	img = cv2.imdecode(data, color_image_flag)
+	#run()
 	print(CNN_predict_grid("/Users/allen/Desktop/download.png"))
 	#completeArray = CNN_predict_grid("/Users/allen/Desktop/download.png")
 	completeArray = predict_grid(img)
