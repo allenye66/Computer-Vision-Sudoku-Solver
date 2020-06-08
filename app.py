@@ -130,7 +130,7 @@ def upload():
     # destination = "/".join([target, filename])
     # print(destination)
     # file.save(destination)
-	return render_template("success.html", array = completeArray)
+	return render_template("success.html", nums = completeArray)
 
 # @app.route("/upload-image", methods=["GET", "POST"])
 # def upload_image():
@@ -212,7 +212,7 @@ def obtainInput():
 
 	iterate = {0, 1, 2, 3, 4, 5, 6, 7, 8}
 
-	return render_template('pass.html', nums=grid, iter=iterate, hints = hint, hLen = len(hint)) #, num = n)
+	return render_template('pass.html', nums=grid, hints = hint, hLen = len(hint)) #, num = n)
 
 
 if __name__ == '__main__':
