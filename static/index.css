@@ -48,6 +48,9 @@ html{
     font-size: 20px;
     color: white;
     border: transparent;
+    font-weight: bold;
+    width: 190px;
+    height: 45px;
 }
 
 input[type="file"] {
@@ -286,5 +289,7 @@ input[type="submit"]{
 
 #credits{
 	/*margin-left: 85%; */
-	margin-top: 17%;
+/*	margin-top: 17%;*/
+    font-family: 'Open Sans';
+    text-align: center;
 }
