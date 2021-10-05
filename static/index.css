@@ -7,10 +7,7 @@ html{
 
 
 }
-#credits{
-	/*margin-left: 85%; */
-	margin-top: 17%;
-}
+
 #explanation{
     font-size: 20px;
     width:500px;
@@ -44,19 +41,17 @@ html{
     font-weight: bold;
 }
 
-/*
 .filebuttontext{
-    padding: 8px 12px;
     cursor: pointer;
-    border-radius: 4px;
-    background-color: #D94549;
-    font-size: 16px;
-    color: #fff;
+    border-radius: 5px;
+    background-color: #20368F;
+    font-size: 20px;
+    color: white;
+    border: transparent;
 }
-*/
 
 input[type="file"] {
-/*    display: none;*/
+    display: none;
 }
 
 /*
@@ -193,6 +188,10 @@ input[type="text"]{
     font-family: 'Open Sans';
 }
 
+input[type="submit"]{
+    display: none;
+}
+
 .pin:clicked{
     background-color: black;
 }
@@ -207,11 +206,11 @@ input[type="text"]{
     border: transparent;
     border-radius: 5px;
 /*    margin-left: 50px;*/
-    margin-top: 20px;
+/*    margin-top: 20px;*/
     cursor: pointer;
     position: relative;
-    left: 550px;
-    bottom: 100px;
+    left: 143px;
+    top: 20px;
 }
 
 .btn{
@@ -283,4 +282,9 @@ input[type="text"]{
 .row9col9{
     border-right: 5px solid black;
     border-bottom: 5px solid black;
+}
+
+#credits{
+	/*margin-left: 85%; */
+	margin-top: 17%;
 }
