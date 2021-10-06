@@ -19,7 +19,7 @@ import numpy as np
 #import runDeep
 #from runDeep import run
 
-app = Flask(__name__, , template_folder='templates')
+app = Flask(__name__, template_folder='templates')
 import tensorflow as tf
 import keras
 from keras.models import load_model
@@ -101,7 +101,7 @@ APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 @app.route("/")
 def index():
-	return render_template("/Users/allen/Desktop/SudokuSolver/index.html")
+	return render_template("index.html")
 
 @app.route("/upload", methods=['POST'])
 def upload():
