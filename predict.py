@@ -4,6 +4,7 @@ from skimage.feature import hog
 import numpy
 # import splice
 from splice import splice_image
+from PIL import Image
 
 
 
@@ -24,9 +25,9 @@ def predict_single(image):
         roi = im_th[pt1:pt1+leng, pt2:pt2+leng]
         height, width = roi.shape
         if height != 0 and width != 0:
-            roi = cv2.resize(roi, (28, 28), interpolation=cv2.INTER_AREA)
+            roi = cv2.resize(roi, (80, 80), interpolation=cv2.INTER_AREA)
             roi = cv2.dilate(roi, (3, 3))
-            roi_hog_fd = hog(roi, orientations=9, pixels_per_cell=(14, 14), cells_per_block=(1, 1), visualize=False)
+            roi_hog_fd = hog(roi, orientations=9, pixels_per_cell=(40, 40), cells_per_block=(1, 1), visualize=False)
             nbr = clf.predict(numpy.array([roi_hog_fd], 'float64'))
             return (nbr[0])
             #cv2.putText(im, str(int(nbr[0])), (rect[0], rect[1]), cv2.FONT_HERSHEY_DUPLEX, 2, (0, 255, 255), 3)
@@ -39,6 +40,9 @@ def predict_grid(image):
     imgArr = splice_image(image)
     grid = []
     for i in range(81):
+        # im = Image.fromarray(imgArr[i])
+        # im.save("images/digits/test"+str(i)+".png")
+        # print(imgArr[i].shape)
         grid.append(predict_single(imgArr[i]))
     #print(len(grid))
     #print(grid)
@@ -64,7 +68,7 @@ def predict_grid(image):
     return grid2
 
 if __name__ == '__main__':
-    img = cv2.imread('/Users/allen/Desktop/download.png')
-    img = cv2.resize(img, dsize=(40, 40), interpolation=cv2.INTER_CUBIC)
+    img = cv2.imread('images/download3.png')
+    # img = cv2.resize(img, dsize=(40, 40), interpolation=cv2.INTER_CUBIC)
     print(predict_grid(img))
 
